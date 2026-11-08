@@ -3,7 +3,7 @@
 # not include virtual environments, caches, or the Hermes checkout.
 set -eu
 cd "$(dirname "$0")/.."
-rm -rf devsentry/__pycache__ tests/__pycache__ .pytest_cache
+rm -rf devsentry/__pycache__ tests/__pycache__ fixtures/sample-project/__pycache__ .pytest_cache
 mkdir -p artifacts
 archive="artifacts/devsentry-0.1.0-source.tar.gz"
 tar \
@@ -15,6 +15,9 @@ tar \
   --exclude "./.mypy_cache" \
   --exclude "devsentry/__pycache__" \
   --exclude "tests/__pycache__" \
+  --exclude "fixtures/sample-project/__pycache__" \
+  --exclude "*.pyc" \
+  --exclude "*.pyo" \
   --exclude "./.hermes" \
   --exclude "./agent-tools" \
   --exclude "./uploads" \

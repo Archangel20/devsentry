@@ -12,8 +12,15 @@ from devsentry.tools import inspect_project, loads
 FIXTURE = Path(__file__).resolve().parents[1] / "fixtures" / "sample-project"
 
 
-def test_sample_project_counts_and_skips():
-    result = loads(inspect_project({"path": str(FIXTURE)}))
+def test_sample_project_counts_and_skips(tmp_path: Path):
+    # The cache file is created in the test directory. A tracked .pyc is
+    # rejected by catalog rule 17 even when the bytes are not real bytecode.
+    project = tmp_path / "sample-project"
+    shutil.copytree(FIXTURE, project)
+    cache = project / "__pycache__"
+    cache.mkdir()
+    (cache / "app.cpython-312.pyc").write_text("not-really-bytecode", encoding="utf-8")
+    result = loads(inspect_project({"path": str(project)}))
     assert result["ok"] is True
     assert result["summary"]["approximate"] is True
     languages = {row["language"]: row["files"] for row in result["languages"]}
