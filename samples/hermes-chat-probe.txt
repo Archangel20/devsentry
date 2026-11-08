@@ -1,0 +1,9 @@
+command: hermes chat --oneshot -Q -q "Reply with the single word pong." --max-turns 1 --ignore-rules
+hermes: Hermes Agent v0.23.0 (2026.9.24), commit 2bd378ed1b8d6bf2192cb26e0a55ff3091e6bd19
+exit: 1
+stdout:
+stderr:
+Hermes is not connected to any AI provider yet. Run `hermes model` to pick one, type `/login` in chat, or add a key with `hermes auth add <provider>`. (Advanced: put an API key such as OPENROUTER_API_KEY in ~/.hermes/.env.)
+
+portal info: Auth not logged in. hermes auth list was empty. ~/.hermes/auth.json was absent.
+No model selected or called any DevSentry tool. This file is the failed chat probe, not a transcript of tool use.

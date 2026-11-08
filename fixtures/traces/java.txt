@@ -1,0 +1,4 @@
+Exception in thread "main" java.lang.NullPointerException: boom
+	at com.example.App.main(App.java:14)
+Caused by: java.lang.IllegalStateException: missing
+	at com.example.App.helper(App.java:9)

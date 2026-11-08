@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/app/src/app.py", line 5, in main
+    print(ratio(1, 0))
+  File "/app/src/app.py", line 2, in ratio
+    return numerator / denominator
+ZeroDivisionError: division by zero

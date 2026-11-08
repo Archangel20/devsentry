@@ -1,0 +1,2 @@
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at App.Program.Main() in C:\src\Program.cs:line 12

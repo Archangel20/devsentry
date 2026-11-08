@@ -1,0 +1,10 @@
+name: devsentry
+version: "0.1.0"
+description: Read-only project inventory, traceback leads, and tracked Git diffs.
+author: DevSentry
+# Floor is the only Hermes release this plugin was loaded on. Older releases were not tested.
+requires_hermes: ">=0.23.0"
+provides_tools:
+  - inspect_project
+  - diagnose_error
+  - review_changes

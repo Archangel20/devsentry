@@ -1,0 +1,22 @@
+[project]
+name = "devsentry"
+version = "0.1.0"
+description = "Read-only Hermes Agent plugin for project inventory, traceback leads, and tracked Git diffs."
+requires-python = ">=3.11"
+readme = "README.md"
+license = "MIT"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.2,<9"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+include = ["devsentry*"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"

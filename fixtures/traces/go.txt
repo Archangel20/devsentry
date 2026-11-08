@@ -1,0 +1,5 @@
+panic: runtime error: invalid memory address or nil pointer dereference
+
+goroutine 1 [running]:
+main.main()
+	/tmp/main.go:10 +0x20

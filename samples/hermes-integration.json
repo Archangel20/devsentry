@@ -1,0 +1,214 @@
+{
+  "hermes_executable": "<home>/.local/bin/hermes",
+  "checkout": "2bd378ed1b8d6bf2192cb26e0a55ff3091e6bd19",
+  "version_command": {
+    "returncode": 0,
+    "stdout": "Hermes Agent v0.23.0 (2026.9.24) \u00b7 stable \u00b7 local 2bd378ed1b8d\nInstall directory: <home>/.hermes/hermes-agent\nInstall method: git\nPython: 3.14.9\nOpenAI SDK: 2.54.0\nUp to date",
+    "stderr": ""
+  },
+  "doctor": {
+    "returncode": 0,
+    "stdout": "Plugin Doctor: /tmp/devsentry-hermes-ejgeu0b_/home/plugins/devsentry\n  manifest: devsentry 0.1.0 (standalone)\n  OK: runtime discovery, manifest parsing, import, and registration passed\n  registrations: 3 tool(s), 0 hook(s)\n",
+    "stderr": "hermes: preparing dependencies for this data root (the checkout's updates belong to <home>/.hermes)...\nPreparing the isolated Hermes runtime\u2026\n  \u2192 Installing Python dependencies\u2026\n  \u2713 Installing Python dependencies\n  \u2192 Installing Python dependencies\u2026\n  \u2713 Installing Python dependencies\n"
+  },
+  "validate": {
+    "returncode": 0,
+    "stdout": "{\n  \"ok\": true,\n  \"checks\": [\n    {\n      \"name\": \"manifest\",\n      \"ok\": true,\n      \"detail\": \"plugin.yaml parses\"\n    },\n    {\n      \"name\": \"manifest fields\",\n      \"ok\": true,\n      \"detail\": \"name, version, description present\"\n    },\n    {\n      \"name\": \"requires_hermes\",\n      \"ok\": true,\n      \"detail\": \"not declared\"\n    },\n    {\n      \"name\": \"config schema\",\n      \"ok\": true,\n      \"detail\": \"not declared\"\n    },\n    {\n      \"name\": \"requires_env\",\n      \"ok\": true,\n      \"detail\": \"all entries UPPER_SNAKE\"\n    },\n    {\n      \"name\": \"oauth\",\n      \"ok\": true,\n      \"detail\": \"not declared\"\n    },\n    {\n      \"name\": \"loadable\",\n      \"ok\": true,\n      \"detail\": \"entry: __init__.py\"\n    },\n    {\n      \"name\": \"python dependencies\",\n      \"ok\": true,\n      \"detail\": \"none declared\"\n    },\n    {\n      \"name\": \"capability probe\",\n      \"ok\": true,\n      \"detail\": \"register() ran in isolation\"\n    },\n    {\n      \"name\": \"declared tools\",\n      \"ok\": true,\n      \"detail\": \"matches registrations\"\n    },\n    {\n      \"name\": \"declared hooks\",\n      \"ok\": true,\n      \"detail\": \"matches registrations\"\n    },\n    {\n      \"name\": \"declared middleware\",\n      \"ok\": true,\n      \"detail\": \"matches registrations\"\n    },\n    {\n      \"name\": \"built-in tool collisions\",\n      \"ok\": true,\n      \"detail\": \"no collisions\"\n    },\n    {\n      \"name\": \"security scan\",\n      \"ok\": true,\n      \"detail\": \"safe\"\n    },\n    {\n      \"name\": \"no core override\",\n      \"ok\": true,\n      \"detail\": \"no runtime rebinds of Hermes core\"\n    }\n  ],\n  \"warnings\": [],\n  \"isolation\": {\n    \"verdict\": \"host\",\n    \"host_ready\": true,\n    \"reasons\": [],\n    \"notes\": [],\n    \"ctx_methods\": [\n      \"register_tool\"\n    ]\n  }\n}\n",
+    "stderr": ""
+  },
+  "enable": {
+    "returncode": 0,
+    "stdout": "\u2713 Plugin devsentry enabled.\n",
+    "stderr": ""
+  },
+  "list": {
+    "returncode": 0,
+    "stdout_chars": 92303,
+    "devsentry_rows": [
+      "\u2502 devsentry           \u2502 enabled     \u2502 0.1.0   \u2502 Read-only project    \u2502 user    \u2502"
+    ],
+    "stderr": ""
+  },
+  "dispatch": {
+    "returncode": 0,
+    "stdout": "DEVSENTRY_JSON:{\"missing\": [], \"registered\": {\"inspect_project\": {\"toolset\": \"devsentry\", \"schema_name\": \"inspect_project\"}, \"diagnose_error\": {\"toolset\": \"devsentry\", \"schema_name\": \"diagnose_error\"}, \"review_changes\": {\"toolset\": \"devsentry\", \"schema_name\": \"review_changes\"}}, \"results\": {\"inspect_project\": {\"ok\": true, \"tool\": \"inspect_project\", \"path\": {\"requested\": \"/tmp/devsentry-hermes-ejgeu0b_/project\", \"resolved\": \"/tmp/devsentry-hermes-ejgeu0b_/project\", \"symlink_resolved\": false}, \"limits\": {\"max_depth\": 6, \"max_entries\": 500, \"clamped\": false}, \"summary\": {\"files\": 1, \"directories\": 0, \"symlinks\": 0, \"sensitive_files\": 0, \"skipped_directories\": 1, \"truncated\": false, \"depth_limited\": false, \"approximate\": true, \"method\": \"extension_and_filename\"}, \"languages\": [{\"language\": \"Python\", \"files\": 1, \"bytes\": 30}], \"other\": [], \"skipped\": [{\"path\": \".git\", \"reason\": \"version_control\"}], \"skipped_list_truncated\": false, \"entries\": [{\"path\": \"app.py\", \"type\": \"file\", \"bytes\": 30, \"language\": \"Python\"}], \"notes\": [\"Inventory is read-only. File contents were not opened.\", \"Symlinks were recorded and were not followed.\", \"Dependency, build, cache, and version-control directories were not descended into.\", \"Language totals are approximate counts by extension and a few well-known filenames.\"]}, \"diagnose_error\": {\"ok\": true, \"tool\": \"diagnose_error\", \"limits\": {\"context_lines\": 1, \"clamped\": false}, \"parsed\": true, \"input_truncated\": false, \"exceptions\": [{\"style\": \"generic\", \"name\": \"ZeroDivisionError\", \"message\": \"division by zero\"}], \"frames\": [{\"style\": \"python\", \"path\": \"/tmp/devsentry-hermes-ejgeu0b_/project/app.py\", \"line\": 2, \"function\": \"value\", \"context\": {\"omitted\": false, \"snippet\": [{\"line\": 1, \"text\": \"def value():\"}, {\"line\": 2, \"text\": \"    return 1 / 1\", \"cited\": true}]}}], \"frames_truncated\": false, \"exceptions_truncated\": false, \"leads\": [\"Check the divisor at the cited line, including a value returned by an earlier call. Confirm it cannot be zero for this input.\"], \"disclaimer\": \"These are explainable debugging leads for a person to verify. They are not a confirmed root cause, and this tool does not claim one.\", \"certainty\": \"leads_only\", \"project_path\": {\"requested\": \"/tmp/devsentry-hermes-ejgeu0b_/project\", \"resolved\": \"/tmp/devsentry-hermes-ejgeu0b_/project\", \"symlink_resolved\": false}}, \"review_changes\": {\"ok\": true, \"repository\": {\"resolved\": \"/tmp/devsentry-hermes-ejgeu0b_/project\", \"toplevel\": \"/tmp/devsentry-hermes-ejgeu0b_/project\", \"head\": \"8b54e029f195cf118924ad085a1564adafed3870\", \"scope_path\": \".\"}, \"scope\": {\"staged\": \"Tracked changes in the index compared with HEAD. Nothing was staged by this tool.\", \"unstaged\": \"Tracked working-tree changes compared with the index.\", \"untracked\": \"Excluded. Untracked names and contents are not part of this review.\"}, \"staged\": {\"ok\": true, \"files\": [], \"file_count\": 0}, \"unstaged\": {\"ok\": true, \"files\": [{\"path\": \"app.py\", \"status\": \"M\", \"patch\": \"diff --git a/app.py b/app.py\\nindex 780b9cd..ec8fd2c 100644\\n--- a/app.py\\n+++ b/app.py\\n@@ -1,2 +1,2 @@\\n def value():\\n-    return 1 / 0\\n+    return 1 / 1\\n\"}], \"file_count\": 1}, \"untracked_count\": 0, \"mutation\": {\"staging\": \"not performed\", \"worktree_writes\": \"not performed\", \"index_sha256_unchanged\": true}, \"notes\": [\"External diff drivers and textconv filters were disabled for these commands.\", \"Git aliases, hooks, and fsmonitor from the repository were overridden for this process.\", \"Patch text for paths that look like secrets was omitted.\", \"Untracked files were counted and were not read.\"], \"tool\": \"review_changes\", \"path\": {\"requested\": \"/tmp/devsentry-hermes-ejgeu0b_/project\", \"resolved\": \"/tmp/devsentry-hermes-ejgeu0b_/project\", \"symlink_resolved\": false}, \"limits\": {\"context_lines\": 3, \"max_patch_bytes\": 20000, \"clamped\": false}}}}\n",
+    "stderr": ""
+  },
+  "dispatch_payload": {
+    "missing": [],
+    "registered": {
+      "inspect_project": {
+        "toolset": "devsentry",
+        "schema_name": "inspect_project"
+      },
+      "diagnose_error": {
+        "toolset": "devsentry",
+        "schema_name": "diagnose_error"
+      },
+      "review_changes": {
+        "toolset": "devsentry",
+        "schema_name": "review_changes"
+      }
+    },
+    "results": {
+      "inspect_project": {
+        "ok": true,
+        "tool": "inspect_project",
+        "path": {
+          "requested": "/tmp/devsentry-hermes-ejgeu0b_/project",
+          "resolved": "/tmp/devsentry-hermes-ejgeu0b_/project",
+          "symlink_resolved": false
+        },
+        "limits": {
+          "max_depth": 6,
+          "max_entries": 500,
+          "clamped": false
+        },
+        "summary": {
+          "files": 1,
+          "directories": 0,
+          "symlinks": 0,
+          "sensitive_files": 0,
+          "skipped_directories": 1,
+          "truncated": false,
+          "depth_limited": false,
+          "approximate": true,
+          "method": "extension_and_filename"
+        },
+        "languages": [
+          {
+            "language": "Python",
+            "files": 1,
+            "bytes": 30
+          }
+        ],
+        "other": [],
+        "skipped": [
+          {
+            "path": ".git",
+            "reason": "version_control"
+          }
+        ],
+        "skipped_list_truncated": false,
+        "entries": [
+          {
+            "path": "app.py",
+            "type": "file",
+            "bytes": 30,
+            "language": "Python"
+          }
+        ],
+        "notes": [
+          "Inventory is read-only. File contents were not opened.",
+          "Symlinks were recorded and were not followed.",
+          "Dependency, build, cache, and version-control directories were not descended into.",
+          "Language totals are approximate counts by extension and a few well-known filenames."
+        ]
+      },
+      "diagnose_error": {
+        "ok": true,
+        "tool": "diagnose_error",
+        "limits": {
+          "context_lines": 1,
+          "clamped": false
+        },
+        "parsed": true,
+        "input_truncated": false,
+        "exceptions": [
+          {
+            "style": "generic",
+            "name": "ZeroDivisionError",
+            "message": "division by zero"
+          }
+        ],
+        "frames": [
+          {
+            "style": "python",
+            "path": "/tmp/devsentry-hermes-ejgeu0b_/project/app.py",
+            "line": 2,
+            "function": "value",
+            "context": {
+              "omitted": false,
+              "snippet": [
+                {
+                  "line": 1,
+                  "text": "def value():"
+                },
+                {
+                  "line": 2,
+                  "text": "    return 1 / 1",
+                  "cited": true
+                }
+              ]
+            }
+          }
+        ],
+        "frames_truncated": false,
+        "exceptions_truncated": false,
+        "leads": [
+          "Check the divisor at the cited line, including a value returned by an earlier call. Confirm it cannot be zero for this input."
+        ],
+        "disclaimer": "These are explainable debugging leads for a person to verify. They are not a confirmed root cause, and this tool does not claim one.",
+        "certainty": "leads_only",
+        "project_path": {
+          "requested": "/tmp/devsentry-hermes-ejgeu0b_/project",
+          "resolved": "/tmp/devsentry-hermes-ejgeu0b_/project",
+          "symlink_resolved": false
+        }
+      },
+      "review_changes": {
+        "ok": true,
+        "repository": {
+          "resolved": "/tmp/devsentry-hermes-ejgeu0b_/project",
+          "toplevel": "/tmp/devsentry-hermes-ejgeu0b_/project",
+          "head": "8b54e029f195cf118924ad085a1564adafed3870",
+          "scope_path": "."
+        },
+        "scope": {
+          "staged": "Tracked changes in the index compared with HEAD. Nothing was staged by this tool.",
+          "unstaged": "Tracked working-tree changes compared with the index.",
+          "untracked": "Excluded. Untracked names and contents are not part of this review."
+        },
+        "staged": {
+          "ok": true,
+          "files": [],
+          "file_count": 0
+        },
+        "unstaged": {
+          "ok": true,
+          "files": [
+            {
+              "path": "app.py",
+              "status": "M",
+              "patch": "diff --git a/app.py b/app.py\nindex 780b9cd..ec8fd2c 100644\n--- a/app.py\n+++ b/app.py\n@@ -1,2 +1,2 @@\n def value():\n-    return 1 / 0\n+    return 1 / 1\n"
+            }
+          ],
+          "file_count": 1
+        },
+        "untracked_count": 0,
+        "mutation": {
+          "staging": "not performed",
+          "worktree_writes": "not performed",
+          "index_sha256_unchanged": true
+        },
+        "notes": [
+          "External diff drivers and textconv filters were disabled for these commands.",
+          "Git aliases, hooks, and fsmonitor from the repository were overridden for this process.",
+          "Patch text for paths that look like secrets was omitted.",
+          "Untracked files were counted and were not read."
+        ],
+        "tool": "review_changes",
+        "path": {
+          "requested": "/tmp/devsentry-hermes-ejgeu0b_/project",
+          "resolved": "/tmp/devsentry-hermes-ejgeu0b_/project",
+          "symlink_resolved": false
+        },
+        "limits": {
+          "context_lines": 3,
+          "max_patch_bytes": 20000,
+          "clamped": false
+        }
+      }
+    }
+  }
+}
